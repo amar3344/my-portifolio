@@ -131,11 +131,6 @@ export default function Projects(props: IProps) {
                         projects.map((eachProject:any)=>currentProjects(eachProject))
                         }</div>
                 </div>
-                <ProjectDetails
-                    show={detailsModal}
-                    onHide={detailsModalClose}
-                    data={projects}
-                />
             </div>
         </section>
     )

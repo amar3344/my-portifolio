@@ -1,8 +1,6 @@
 import React from 'react';
 import { Modal } from "react-bootstrap";
 import AwesomeSlider from "react-awesome-slider";
-// import AwesomeSliderStyles from "./Light-Slider.scss";
-// import AwesomeSliderStyles2 from ".Dark-Slider.scss";
 import "react-awesome-slider/dist/custom-animations/scale-out-animation.css";
 import 'react-awesome-slider/dist/styles.css';
 import "../../index.css"
@@ -14,9 +12,6 @@ interface IProps{
 }
 
 export default function ProjectDetails(props:IProps) {
-
-        console.log(">>>>>>>",props.data)
-
 
     const tech = (icons:any,i:any) => {
         return (
@@ -66,13 +61,6 @@ export default function ProjectDetails(props:IProps) {
                 data-inline="false"
               ></span>
             </div>
-            {/* <AwesomeSlider
-              cssModule={[AwesomeSliderStyles, AwesomeSliderStyles2]}
-              animation="scaleOutAnimation"
-              className="slider-image"
-            >
-              {img}
-            </AwesomeSlider> */}
           </div>
           <div className="col-md-10 mx-auto">
             <h3 style={{ padding: "5px 5px 0 5px" }}>
@@ -91,9 +79,6 @@ export default function ProjectDetails(props:IProps) {
             </h3>
             <p className="modal-description">{props.data.map((eachItem:{description:string}) => eachItem.description)}</p>
             <div className="col-md-12 text-center">
-              {/* <ul className="list-inline mx-auto">{
-                props.data.technologies.map((eachItem:any,i:any)=>tech(eachItem,i))
-                }</ul> */}
             </div>
           </div>
         </div>
