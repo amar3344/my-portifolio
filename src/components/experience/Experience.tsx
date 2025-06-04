@@ -1,10 +1,10 @@
-import React from 'react';
 import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import Badge from "react-bootstrap/Badge";
+import "../../index.css"
 
 const  experience  =  [
       {

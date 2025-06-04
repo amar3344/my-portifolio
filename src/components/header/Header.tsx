@@ -1,6 +1,5 @@
 import React from 'react'
 import Switch from "react-switch";
-import { useState } from 'react';
 import Typical from "react-typical";
 import "../../index.css"
 
@@ -9,8 +8,6 @@ interface IProps{
 }
 
 export default function Header(props:IProps) {
-
-    const [titles,setTitles] = useState([])
 
     const HeaderTitleTypeAnimation = React.memo(() => {
         let updateTitles = props.sharedData.titles.map((x:any) => [x.toUpperCase(), 1500]).flat();

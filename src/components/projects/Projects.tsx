@@ -1,4 +1,3 @@
-import React from 'react'
 import "../../App.css"
 import { useState } from 'react'
 import ProjectDetails from './ProjectDetails'
@@ -132,11 +131,11 @@ export default function Projects(props: IProps) {
                         projects.map((eachProject:any)=>currentProjects(eachProject))
                         }</div>
                 </div>
-                {/* <ProjectDetails
+                <ProjectDetails
                     show={detailsModal}
                     onHide={detailsModalClose}
                     data={projects}
-                /> */}
+                />
             </div>
         </section>
     )
