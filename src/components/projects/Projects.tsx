@@ -1,6 +1,4 @@
 import "../../App.css"
-import { useState } from 'react'
-import ProjectDetails from './ProjectDetails'
 import "../../index.css"
 
 
@@ -81,18 +79,6 @@ const projects =  [
 
 export default function Projects(props: IProps) {
 
-    const [detailsModal, setDetailModal] = useState(true)
-    const [deps,setDeps] = useState<any>()
-
-    const detailsModalClose = () => {
-        setDetailModal(false)
-    }
-
-    const  detailsModalShow = (data:any) => {
-        setDetailModal(true)
-        setDeps(data)
-    };
-
     const currentProjects = (projects:{title:string,images:string[],startDate:string}) =>{
          return (
                 <div
@@ -101,7 +87,7 @@ export default function Projects(props: IProps) {
                     style={{ cursor: "pointer" }}
                 >
                     <span className="portfolio-item d-block">
-                        <div className="foto" onClick={() => detailsModalShow(projects)}>
+                        <div className="foto">
                             <div>
                                 <img
                                     src={projects.images[0]}
