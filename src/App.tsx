@@ -5,6 +5,7 @@ import Projects from './components/projects/Projects';
 import Skills from './components/skills/Skills';
 import Experience from './components/experience/Experience';
 import Footer from './components/footer/Footer';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 
 const myDetails = {
@@ -30,15 +31,18 @@ const resumeData = {
 function App() { 
 
    return (
-      <div>
-        <Header sharedData={myDetails.basic_info} />
-        <About resumeBasicInfo={resumeData.basic_info}/>
-        <Projects resumeBasicInfo={resumeData.basic_info}/>
-        <Skills/>
-        <Experience/>
-        <Footer/>
-      </div>
-    );
+    <BrowserRouter>
+      <Header sharedData={myDetails.basic_info} />
+      <Routes>
+        <Route path="/" element={<About resumeBasicInfo={resumeData.basic_info} />} />
+        <Route path="/projects" element={<Projects resumeBasicInfo={resumeData.basic_info} />} />
+        <Route path="/skills" element={<Skills />} />
+        <Route path="/experience" element={<Experience />} />
+        <Route path="*" element={<h2>Page Not Found</h2>} />
+      </Routes>
+      <Footer />
+    </BrowserRouter>
+  );
 }
 
 export default App;
