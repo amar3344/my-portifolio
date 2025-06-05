@@ -57,6 +57,7 @@
     "@types/jquery": "^3.5.32",
     "@types/react-typical": "^0.1.2",
     "@types/react-vertical-timeline-component": "^3.3.6",
+    "ajv": "^7.2.4",
     "gh-pages": "6.3.0",
     "sass": "1.89.1"
   }
