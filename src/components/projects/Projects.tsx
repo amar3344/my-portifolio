@@ -6,7 +6,7 @@ interface IProps {
     resumeBasicInfo: any
 }
 
-const projects =  [
+const projects = [
     {
         "title": "OffSpace",
         "startDate": "2025",
